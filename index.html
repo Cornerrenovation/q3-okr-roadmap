@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corner · Q3 roadmap — OKRs &amp; KPIs</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F1EA; --surface:#FFFFFF; --text:#1A1916; --text-2:#6B6760; --text-3:#A39E94;
+  --border:rgba(26,25,22,.10); --border-2:rgba(26,25,22,.17);
+  --g:#2C5D3E; --g-bg:#E8F0EA; --o:#9E4A2B; --o-bg:#F5E9E2;
+  --radius:16px; --radius-sm:11px;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --serif:'Instrument Serif',Georgia,serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;width:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow:hidden}
+.bar{position:fixed;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:clamp(16px,2.4vw,26px) clamp(20px,3.6vw,42px);z-index:20}
+.bar.top{top:0}.bar.bot{bottom:0}
+.brand{display:flex;align-items:center;gap:10px;font-size:15px;color:var(--text-2)}
+.brand b{font-weight:500;color:var(--text);font-size:16px;letter-spacing:.02em}
+.dotmark{width:10px;height:10px;border-radius:3px;background:var(--g)}
+.tools{display:flex;align-items:center;gap:16px}
+.count{font-size:14px;color:var(--text-3);font-variant-numeric:tabular-nums;letter-spacing:.05em}
+.btn{font-family:var(--sans);font-size:14px;color:var(--text-2);background:transparent;border:1px solid var(--border-2);border-radius:999px;padding:8px 17px;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.btn:hover{background:var(--surface);color:var(--text);border-color:var(--text-3)}
+.btn:disabled{opacity:.32;cursor:default}
+.btn:disabled:hover{background:transparent;color:var(--text-2);border-color:var(--border-2)}
+.stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:clamp(72px,12vh,128px) clamp(20px,4vw,56px)}
+.slide{position:absolute;width:min(94vw,1080px);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:clamp(30px,4.6vw,70px);min-height:min(72vh,668px);display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(12px) scale(.994);transition:opacity .45s ease,transform .45s ease;pointer-events:none;box-shadow:0 1px 2px rgba(26,25,22,.04),0 22px 56px -30px rgba(26,25,22,.20)}
+.slide.on{opacity:1;transform:none;pointer-events:auto}
+.eyebrow{font-size:clamp(13px,1.4vw,15px);color:var(--text-2);letter-spacing:.05em;margin-bottom:clamp(14px,1.9vw,22px);display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.title{font-family:var(--serif);font-weight:400;color:var(--text);line-height:1.04;letter-spacing:.006em;font-size:clamp(34px,5vw,60px);margin:0 0 clamp(12px,1.6vw,20px)}
+.hero{font-family:var(--serif);font-weight:400;color:var(--text);line-height:.97;letter-spacing:.01em;font-size:clamp(56px,9vw,112px);margin:clamp(6px,1vw,12px) 0 clamp(14px,1.9vw,22px)}
+.sub{font-size:clamp(16px,1.8vw,22px);color:var(--text-2);line-height:1.55;max-width:48ch;margin:0 0 clamp(20px,2.6vw,34px)}
+.tag{font-size:clamp(12px,1.2vw,14px);padding:3px 13px;border-radius:999px;letter-spacing:.02em;font-weight:500}
+.tag-g{background:var(--g-bg);color:var(--g)}.tag-o{background:var(--o-bg);color:var(--o)}
+.ac-g{color:var(--g)}.ac-o{color:var(--o)}
+.kr{background:var(--bg);border-radius:var(--radius-sm);padding:clamp(14px,1.7vw,22px) clamp(16px,2vw,26px);margin-bottom:clamp(9px,1vw,13px)}
+.kr h4{margin:0 0 4px;font-size:clamp(15px,1.7vw,20px);font-weight:500;color:var(--text)}
+.kr p{margin:0;font-size:clamp(13px,1.5vw,17px);color:var(--text-2);line-height:1.55}
+.note{font-size:clamp(13px,1.4vw,16px);color:var(--text-3);margin-top:clamp(8px,1.2vw,14px)}
+.rule{margin-top:clamp(22px,3vw,34px);padding-top:clamp(16px,2vw,22px);border-top:1px solid var(--border);font-size:clamp(15px,1.6vw,20px);color:var(--text-2);letter-spacing:.04em}
+.funnel{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(6px,.8vw,9px);margin-bottom:clamp(14px,1.8vw,20px)}
+.chip{padding:clamp(6px,.8vw,9px) clamp(11px,1.3vw,16px);border-radius:999px;font-size:clamp(13px,1.4vw,16px);white-space:nowrap}
+.chip.g{background:var(--g-bg);color:var(--g)}.chip.o{background:var(--o-bg);color:var(--o)}
+.sep{color:var(--text-3);font-size:clamp(13px,1.4vw,16px)}
+.legend{display:flex;gap:clamp(16px,2.2vw,28px);flex-wrap:wrap;font-size:clamp(13px,1.4vw,16px);color:var(--text-2)}
+.leg{display:inline-flex;align-items:center;gap:8px}
+.ld{width:9px;height:9px;border-radius:50%;display:inline-block}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,1.4vw,16px)}
+.card{background:var(--bg);border-radius:var(--radius-sm);padding:clamp(16px,2vw,26px)}
+.card h4{margin:0 0 5px;font-size:clamp(15px,1.7vw,20px);font-weight:500;color:var(--text)}
+.card p{margin:0;font-size:clamp(13px,1.5vw,17px);color:var(--text-2);line-height:1.7}
+.flow{display:flex;align-items:stretch;gap:clamp(10px,1.4vw,16px);margin-bottom:clamp(16px,2vw,24px)}
+.zone{flex:1;border-radius:var(--radius-sm);padding:clamp(18px,2.2vw,32px) clamp(14px,1.6vw,20px);text-align:center}
+.zone.g{background:var(--g-bg)}.zone.o{background:var(--o-bg)}
+.zt{font-size:clamp(16px,1.8vw,22px);font-weight:500}
+.zone.g .zt{color:var(--g)}.zone.o .zt{color:var(--o)}
+.zs{font-size:clamp(12px,1.4vw,15px);margin-top:4px}
+.zone.g .zs{color:var(--g)}.zone.o .zs{color:var(--o)}
+.mid{flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--text-3);min-width:clamp(46px,6vw,74px)}
+.mid .ar{font-size:clamp(18px,2vw,26px)}
+.mid .pct{font-size:clamp(13px,1.5vw,17px);font-weight:500;color:var(--text);margin-top:3px}
+.ns{display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--bg);border-radius:var(--radius-sm);padding:clamp(12px,1.4vw,18px) clamp(15px,1.8vw,22px);margin-bottom:6px}
+.role{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:clamp(8px,1vw,13px) clamp(2px,.4vw,6px);border-top:1px solid var(--border)}
+.rn{font-size:clamp(15px,1.55vw,19px);font-weight:500;color:var(--text)}
+.rk{font-size:clamp(13px,1.4vw,16px);color:var(--text-2);margin-top:2px}
+.muted{color:var(--text-3);font-weight:400}
+.tag-ns{background:rgba(26,25,22,.06);color:var(--text-2);font-size:clamp(12px,1.2vw,14px);padding:3px 13px;border-radius:999px}
+.check{display:flex;flex-direction:column;gap:clamp(11px,1.4vw,16px);margin-bottom:clamp(18px,2.4vw,28px)}
+.crow{display:flex;gap:13px;align-items:flex-start;font-size:clamp(15px,1.55vw,19px);color:var(--text-2);line-height:1.5}
+.cdot{width:8px;height:8px;border-radius:50%;background:var(--g);flex-shrink:0;margin-top:.5em}
+.dots{display:flex;gap:8px;align-items:center}
+.dot{width:9px;height:9px;border-radius:999px;border:0;padding:0;background:var(--border-2);cursor:pointer;transition:background .15s,width .2s}
+.dot.on{background:var(--g);width:26px}
+.nav{display:flex;gap:10px}
+@media(max-width:680px){.grid2{grid-template-columns:1fr}.flow{flex-direction:column}.sub{max-width:none}}
+</style>
+</head>
+<body>
+<div class="bar top">
+  <div class="brand"><span class="dotmark"></span><b>Corner</b> · company roadmap</div>
+  <div class="tools">
+    <span class="count"><span class="cur">1</span><span class="tot"> / 9</span></span>
+    <button class="btn present">Present</button>
+  </div>
+</div>
+
+<div class="stage">
+
+  <section class="slide on">
+    <div class="eyebrow">roadmap · June – August 2026</div>
+    <div class="hero">OKRs &amp; KPIs</div>
+    <div class="sub">Two objectives. One number each. A clear line from the first call to the finished kitchen.</div>
+    <div class="rule">secure&nbsp; →&nbsp; deliver&nbsp; →&nbsp; showcase</div>
+  </section>
+
+  <section class="slide">
+    <div class="eyebrow">the focus</div>
+    <div class="title">We win at commitment, not demand</div>
+    <div class="sub">Our demand and our craft are already strong. Projects stall in the steps between “yes” and “paid” — so that's where this roadmap aims.</div>
+    <div class="funnel">
+      <span class="chip g">Leads</span><span class="sep">→</span>
+      <span class="chip g">Proposal</span><span class="sep">→</span>
+      <span class="chip g">$500</span><span class="sep">→</span>
+      <span class="chip g">Design</span><span class="sep">→</span>
+      <span class="chip g">10%</span><span class="sep">→</span>
+      <span class="chip o">Delivery</span><span class="sep">→</span>
+      <span class="chip o">Photoshoot</span>
+    </div>
+    <div class="sub" style="margin-bottom:clamp(16px,2vw,24px)">Most of the leak sits between <span style="color:var(--text);font-weight:500">$500 and 10%</span> — the design stage.</div>
+    <div class="legend">
+      <span class="leg"><span class="ld" style="background:var(--g)"></span> Growth — to the 10%</span>
+      <span class="leg"><span class="ld" style="background:var(--o)"></span> Operations — after the 10%</span>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="eyebrow">how we run it</div>
+    <div class="title">Company OKRs, one KPI per person</div>
+    <div class="sub">Lighter structure, sharper accountability — decided together on June 8.</div>
+    <div class="grid2">
+      <div class="card"><h4>Company OKRs only</h4><p>no team-level layer</p></div>
+      <div class="card"><h4>Two objectives</h4><p>growth half · delivery half</p></div>
+      <div class="card"><h4>One KPI per role</h4><p>your single number</p></div>
+      <div class="card"><h4>Tracked monthly</h4><p>KPI review meeting</p></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="eyebrow"><span class="tag tag-g">OKR 1</span> growth · revenue</div>
+    <div class="title">Increase revenue</div>
+    <div class="sub">Land the new design-stage framework and fill the pipeline.</div>
+    <div class="kr"><h4><span class="ac-g">KR 1.1</span> · Secured project value</h4><p>target set from the week-1 baseline</p></div>
+    <div class="kr"><h4><span class="ac-g">KR 1.2</span> · Design-stage framework live</h4><p>carrying ≥ 85% of design-stage projects on-cadence</p></div>
+    <div class="kr"><h4><span class="ac-g">KR 1.3</span> · New projects into the pipeline</h4><p>target set from the week-1 baseline</p></div>
+    <div class="note">North star: revenue — the lagging result these KRs feed.</div>
+  </section>
+
+  <section class="slide">
+    <div class="eyebrow"><span class="tag tag-o">OKR 2</span> delivery · operations</div>
+    <div class="title">Set up a delivery engine</div>
+    <div class="sub">Hire and standardize so we reliably ship what we secure.</div>
+    <div class="kr"><h4><span class="ac-o">KR 2.1</span> · 10% → production cycle time</h4><p>target set from the week-1 baseline</p></div>
+    <div class="kr"><h4><span class="ac-o">KR 2.2</span> · Hire, ramp &amp; standardize</h4><p>new hires to independent delivery + delivery SOPs live and adopted</p></div>
+    <div class="kr"><h4><span class="ac-o">KR 2.3</span> · Portfolio &amp; satisfaction</h4><p>photoshoots completed &amp; published · NPS tracked at every stage</p></div>
+    <div class="note">Measured by output, not by “we hired and wrote docs.”</div>
+  </section>
+
+  <section class="slide">
+    <div class="eyebrow">the handoff</div>
+    <div class="title">The 10% handoff is owned</div>
+    <div class="sub">Our funnel leaks at handoffs. The line where Growth passes to Operations won't be one of them.</div>
+    <div class="flow">
+      <div class="zone g"><div class="zt">Growth</div><div class="zs">leadgen → 10%</div></div>
+      <div class="mid"><div class="ar">→</div><div class="pct">10%</div></div>
+      <div class="zone o"><div class="zt">Operations</div><div class="zs">10% → photoshoot</div></div>
+    </div>
+    <div class="kr"><h4>The one rule</h4><p>Operations books every 10%-paid project into delivery within [X] days — nothing waits at the seam.</p></div>
+  </section>
+
+  <section class="slide">
+    <div class="eyebrow">accountability</div>
+    <div class="title">One KPI per role</div>
+    <div class="ns">
+      <div><div class="rn">CEO</div><div class="rk">Monthly revenue</div></div>
+      <span class="tag-ns">north star</span>
+    </div>
+    <div class="role"><div><div class="rn">Content manager</div><div class="rk">Organic qualified leads / month</div></div><span class="tag tag-g">OKR 1</span></div>
+    <div class="role"><div><div class="rn">Growth lead <span class="muted">(Kostya, for now)</span></div><div class="rk">Proposal → $500 conversion</div></div><span class="tag tag-g">OKR 1</span></div>
+    <div class="role"><div><div class="rn">Sales designer</div><div class="rk">Monthly secured project value</div></div><span class="tag tag-g">OKR 1</span></div>
+    <div class="role"><div><div class="rn">Design lead</div><div class="rk">% of projects completing the design stage on-cadence</div></div><span class="tag tag-g">OKR 1</span></div>
+    <div class="role"><div><div class="rn">Technical designer</div><div class="rk">Median technical-drawing turnaround</div></div><span class="tag tag-o">OKR 2</span></div>
+    <div class="role"><div><div class="rn">Project manager</div><div class="rk">Median 10% → production cycle time</div></div><span class="tag tag-o">OKR 2</span></div>
+    <div class="role"><div><div class="rn">Operations lead</div><div class="rk">Photoshoots completed &amp; published</div></div><span class="tag tag-o">OKR 2</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="eyebrow">rhythm</div>
+    <div class="title">How we track it</div>
+    <div class="sub">Same numbers, seen on a predictable cadence — plus satisfaction at every stage.</div>
+    <div class="grid2">
+      <div class="card"><h4>Cadence</h4><p>Monthly KPI review — the three of us<br>Weekly operations sync<br>Bi-weekly whole-team</p></div>
+      <div class="card"><h4>Quality · NPS</h4><p>Tracked at every stage:</p>
+        <div class="funnel" style="margin:10px 0 0">
+          <span class="chip o">Design</span><span class="chip o">Production</span><span class="chip o">Delivery</span><span class="chip o">Installation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="eyebrow">this week</div>
+    <div class="title">From draft to live</div>
+    <div class="sub">What turns this from a plan into the operating system for June – August.</div>
+    <div class="check">
+      <div class="crow"><span class="cdot"></span>Set the targets from week-1 baselines — the dollar values and the day counts.</div>
+      <div class="crow"><span class="cdot"></span>Every owner knows their one number and where it ladders.</div>
+      <div class="crow"><span class="cdot"></span>The design-stage framework rolls out to the whole team.</div>
+      <div class="crow"><span class="cdot"></span>Roadmap runs June → August, reviewed monthly.</div>
+    </div>
+    <div class="rule">secure&nbsp; →&nbsp; deliver&nbsp; →&nbsp; showcase</div>
+  </section>
+
+</div>
+
+<div class="bar bot">
+  <div class="nav"><button class="btn prev">← Back</button></div>
+  <div class="dots"></div>
+  <div class="nav"><button class="btn next">Next →</button></div>
+</div>
+
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var dotsWrap=document.querySelector('.dots');
+  var cur=document.querySelector('.cur');
+  var tot=document.querySelector('.tot');
+  var prev=document.querySelector('.prev');
+  var next=document.querySelector('.next');
+  var present=document.querySelector('.present');
+  var i=0, n=slides.length;
+  if(tot) tot.textContent=' / '+n;
+  var dots=slides.map(function(s,k){
+    var b=document.createElement('button');
+    b.className='dot';
+    b.setAttribute('aria-label','Go to slide '+(k+1));
+    b.addEventListener('click',function(){go(k);});
+    dotsWrap.appendChild(b);
+    return b;
+  });
+  function go(k){
+    i=Math.max(0,Math.min(n-1,k));
+    slides.forEach(function(s,j){s.classList.toggle('on',j===i);});
+    dots.forEach(function(d,j){d.classList.toggle('on',j===i);});
+    if(cur) cur.textContent=i+1;
+    prev.disabled=(i===0);
+    next.disabled=(i===n-1);
+  }
+  prev.addEventListener('click',function(){go(i-1);});
+  next.addEventListener('click',function(){go(i+1);});
+  present.addEventListener('click',function(){
+    if(!document.fullscreenElement){ (document.documentElement.requestFullscreen||function(){})().catch(function(){}); }
+    else { document.exitFullscreen(); }
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){go(i+1);e.preventDefault();}
+    else if(e.key==='ArrowLeft'||e.key==='PageUp'){go(i-1);e.preventDefault();}
+    else if(e.key==='Home'){go(0);}
+    else if(e.key==='End'){go(n-1);}
+    else if(e.key==='f'||e.key==='F'){present.click();}
+  });
+  go(0);
+})();
+</script>
+</body>
+</html>
