@@ -80,6 +80,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
 .tl-fill{position:absolute;left:0;top:0;bottom:0;border-radius:999px;background:var(--g)}
 .tl-div{position:absolute;top:-7px;bottom:-7px;width:1px;background:var(--border-2)}
 .tl-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:clamp(16px,1.8vw,20px);height:clamp(16px,1.8vw,20px);border-radius:50%;background:var(--g);border:3px solid var(--surface)}
+.tl-o .tl-now span{color:var(--o)}.tl-o .tl-fill{background:var(--o)}.tl-o .tl-dot{background:var(--o)}
 .tl-months{display:flex;margin-top:clamp(10px,1.2vw,14px);font-size:clamp(13px,1.5vw,17px);color:var(--text-2)}
 .tl-months div{flex:1;text-align:center}
 .dots{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center}
@@ -93,7 +94,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
 <div class="bar top">
   <div class="brand"><span class="dotmark"></span><b>Corner</b> · company roadmap</div>
   <div class="tools">
-    <span class="count"><span class="cur">1</span><span class="tot"> / 11</span></span>
+    <span class="count"><span class="cur">1</span><span class="tot"> / 12</span></span>
     <button class="btn present">Present</button>
   </div>
 </div>
@@ -110,7 +111,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
   <section class="slide">
     <div class="eyebrow">the focus</div>
     <div class="title">We win at commitment, not demand</div>
-    <div class="sub">We keep the pipeline full. Now we close the next gap — between “yes” and “paid”.</div>
+    <div class="sub">We push on every part of the funnel — with the sharpest focus on the gap between “yes” and “paid”.</div>
     <div class="funnel">
       <span class="chip g">Leads</span><span class="sep">→</span>
       <span class="chip g">Proposal</span><span class="sep">→</span>
@@ -216,9 +217,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
   </section>
 
   <section class="slide">
-    <div class="eyebrow">where we are</div>
+    <div class="eyebrow"><span class="tag tag-g">growth</span> where we are</div>
     <div class="title">June → August</div>
-    <div class="sub">Kicking off now, in mid-June — with the end of August to land it.</div>
+    <div class="sub">We're in mid-June. The pipeline-to-10% push runs to the end of August.</div>
     <div class="tl">
       <div class="tl-now"><span style="left:15%">now</span></div>
       <div class="tl-track">
@@ -232,6 +233,26 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
     <div class="grid2" style="margin-top:clamp(22px,3vw,36px)">
       <div class="card"><h4>Now · mid-June</h4><p>set baselines and roll out the design-stage framework</p></div>
       <div class="card"><h4>End of August</h4><p>current + June–July $500 customers converted to 10%</p></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="eyebrow"><span class="tag tag-o">operations</span> where we are</div>
+    <div class="title">June → August</div>
+    <div class="sub">We're in mid-June. The delivery engine comes together by the end of August.</div>
+    <div class="tl tl-o">
+      <div class="tl-now"><span style="left:15%">now</span></div>
+      <div class="tl-track">
+        <div class="tl-fill" style="width:15%"></div>
+        <div class="tl-div" style="left:33.33%"></div>
+        <div class="tl-div" style="left:66.66%"></div>
+        <div class="tl-dot" style="left:15%"></div>
+      </div>
+      <div class="tl-months"><div>June</div><div>July</div><div>August</div></div>
+    </div>
+    <div class="grid2" style="margin-top:clamp(22px,3vw,36px)">
+      <div class="card"><h4>Now · mid-June</h4><p>hire the technical designer and standardize the delivery experience</p></div>
+      <div class="card"><h4>End of August</h4><p>delivery engine running — on-time production and photoshoots flowing</p></div>
     </div>
   </section>
 
