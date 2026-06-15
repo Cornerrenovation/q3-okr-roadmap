@@ -73,9 +73,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
 .rk{font-size:clamp(13px,1.4vw,16px);color:var(--text-2);margin-top:2px}
 .muted{color:var(--text-3);font-weight:400}
 .tag-ns{background:rgba(26,25,22,.06);color:var(--text-2);font-size:clamp(12px,1.2vw,14px);padding:3px 13px;border-radius:999px}
-.check{display:flex;flex-direction:column;gap:clamp(11px,1.4vw,16px);margin-bottom:clamp(18px,2.4vw,28px)}
-.crow{display:flex;gap:13px;align-items:flex-start;font-size:clamp(15px,1.55vw,19px);color:var(--text-2);line-height:1.5}
-.cdot{width:8px;height:8px;border-radius:50%;background:var(--g);flex-shrink:0;margin-top:.5em}
 .dots{display:flex;gap:8px;align-items:center}
 .dot{width:9px;height:9px;border-radius:999px;border:0;padding:0;background:var(--border-2);cursor:pointer;transition:background .15s,width .2s}
 .dot.on{background:var(--g);width:26px}
@@ -87,7 +84,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
 <div class="bar top">
   <div class="brand"><span class="dotmark"></span><b>Corner</b> · company roadmap</div>
   <div class="tools">
-    <span class="count"><span class="cur">1</span><span class="tot"> / 9</span></span>
+    <span class="count"><span class="cur">1</span><span class="tot"> / 8</span></span>
     <button class="btn present">Present</button>
   </div>
 </div>
@@ -104,7 +101,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
   <section class="slide">
     <div class="eyebrow">the focus</div>
     <div class="title">We win at commitment, not demand</div>
-    <div class="sub">Our demand and our craft are already strong. Projects stall in the steps between “yes” and “paid” — so that's where this roadmap aims.</div>
+    <div class="sub">Demand and craft are real strengths we keep building. What loses us projects is the stretch between “yes” and “paid” — and that's where this roadmap aims.</div>
     <div class="funnel">
       <span class="chip g">Leads</span><span class="sep">→</span>
       <span class="chip g">Proposal</span><span class="sep">→</span>
@@ -124,7 +121,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
   <section class="slide">
     <div class="eyebrow">how we run it</div>
     <div class="title">Company OKRs, one KPI per person</div>
-    <div class="sub">Lighter structure, sharper accountability — decided together on June 8.</div>
+    <div class="sub">Lighter structure, sharper accountability.</div>
     <div class="grid2">
       <div class="card"><h4>Company OKRs only</h4><p>no team-level layer</p></div>
       <div class="card"><h4>Two objectives</h4><p>growth half · delivery half</p></div>
@@ -137,7 +134,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
     <div class="eyebrow"><span class="tag tag-g">OKR 1</span> growth · revenue</div>
     <div class="title">Increase revenue</div>
     <div class="sub">Land the new design-stage framework and fill the pipeline.</div>
-    <div class="kr"><h4><span class="ac-g">KR 1.1</span> · Secured project value</h4><p>target set from the week-1 baseline</p></div>
+    <div class="kr"><h4><span class="ac-g">KR 1.1</span> · Convert the $500 pipeline to 10%</h4><p>all current and June–July $500 deposits reach 10% by end of August</p></div>
     <div class="kr"><h4><span class="ac-g">KR 1.2</span> · Design-stage framework live</h4><p>carrying ≥ 85% of design-stage projects on-cadence</p></div>
     <div class="kr"><h4><span class="ac-g">KR 1.3</span> · New projects into the pipeline</h4><p>target set from the week-1 baseline</p></div>
     <div class="note">North star: revenue — the lagging result these KRs feed.</div>
@@ -147,10 +144,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
     <div class="eyebrow"><span class="tag tag-o">OKR 2</span> delivery · operations</div>
     <div class="title">Set up a delivery engine</div>
     <div class="sub">Hire and standardize so we reliably ship what we secure.</div>
-    <div class="kr"><h4><span class="ac-o">KR 2.1</span> · 10% → production cycle time</h4><p>target set from the week-1 baseline</p></div>
-    <div class="kr"><h4><span class="ac-o">KR 2.2</span> · Hire, ramp &amp; standardize</h4><p>new hires to independent delivery + delivery SOPs live and adopted</p></div>
-    <div class="kr"><h4><span class="ac-o">KR 2.3</span> · Portfolio &amp; satisfaction</h4><p>photoshoots completed &amp; published · NPS tracked at every stage</p></div>
-    <div class="note">Measured by output, not by “we hired and wrote docs.”</div>
+    <div class="kr"><h4><span class="ac-o">KR 2.1</span> · Projects moved to production on time</h4><p>delivered to the production stage on schedule</p></div>
+    <div class="kr"><h4><span class="ac-o">KR 2.2</span> · Customer experience standardized</h4><p>one consistent journey — mood boards, SOPs, communication</p></div>
+    <div class="kr"><h4><span class="ac-o">KR 2.3</span> · Photoshoots completed</h4><p>professional shoots of delivered kitchens</p></div>
   </section>
 
   <section class="slide">
@@ -162,7 +158,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
       <div class="mid"><div class="ar">→</div><div class="pct">10%</div></div>
       <div class="zone o"><div class="zt">Operations</div><div class="zs">10% → photoshoot</div></div>
     </div>
-    <div class="kr"><h4>The one rule</h4><p>Operations books every 10%-paid project into delivery within [X] days — nothing waits at the seam.</p></div>
+    <div class="kr"><h4>The one rule</h4><p>Operations books every 10%-paid project into technical drawings within [X] days.</p></div>
   </section>
 
   <section class="slide">
@@ -172,40 +168,22 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
       <div><div class="rn">CEO</div><div class="rk">Monthly revenue</div></div>
       <span class="tag-ns">north star</span>
     </div>
-    <div class="role"><div><div class="rn">Content manager</div><div class="rk">Organic qualified leads / month</div></div><span class="tag tag-g">OKR 1</span></div>
-    <div class="role"><div><div class="rn">Growth lead <span class="muted">(Kostya, for now)</span></div><div class="rk">Proposal → $500 conversion</div></div><span class="tag tag-g">OKR 1</span></div>
+    <div class="role"><div><div class="rn">Growth lead</div><div class="rk">Proposal → $500 conversion</div></div><span class="tag tag-g">OKR 1</span></div>
     <div class="role"><div><div class="rn">Sales designer</div><div class="rk">Monthly secured project value</div></div><span class="tag tag-g">OKR 1</span></div>
     <div class="role"><div><div class="rn">Design lead</div><div class="rk">% of projects completing the design stage on-cadence</div></div><span class="tag tag-g">OKR 1</span></div>
+    <div class="role"><div><div class="rn">Operations lead</div><div class="rk">Photoshoots completed</div></div><span class="tag tag-o">OKR 2</span></div>
     <div class="role"><div><div class="rn">Technical designer</div><div class="rk">Median technical-drawing turnaround</div></div><span class="tag tag-o">OKR 2</span></div>
-    <div class="role"><div><div class="rn">Project manager</div><div class="rk">Median 10% → production cycle time</div></div><span class="tag tag-o">OKR 2</span></div>
-    <div class="role"><div><div class="rn">Operations lead</div><div class="rk">Photoshoots completed &amp; published</div></div><span class="tag tag-o">OKR 2</span></div>
+    <div class="role"><div><div class="rn">Project manager</div><div class="rk">Delightful customer experience provided</div></div><span class="tag tag-o">OKR 2</span></div>
   </section>
 
   <section class="slide">
     <div class="eyebrow">rhythm</div>
     <div class="title">How we track it</div>
-    <div class="sub">Same numbers, seen on a predictable cadence — plus satisfaction at every stage.</div>
+    <div class="sub">We track progress through clear metrics and regular updates.</div>
     <div class="grid2">
-      <div class="card"><h4>Cadence</h4><p>Monthly KPI review — the three of us<br>Weekly operations sync<br>Bi-weekly whole-team</p></div>
-      <div class="card"><h4>Quality · NPS</h4><p>Tracked at every stage:</p>
-        <div class="funnel" style="margin:10px 0 0">
-          <span class="chip o">Design</span><span class="chip o">Production</span><span class="chip o">Delivery</span><span class="chip o">Installation</span>
-        </div>
-      </div>
+      <div class="card"><h4>Monthly KPI review</h4><p>every owner's number, reviewed together</p></div>
+      <div class="card"><h4>Bi-weekly whole-team</h4><p>alignment as the team grows</p></div>
     </div>
-  </section>
-
-  <section class="slide">
-    <div class="eyebrow">this week</div>
-    <div class="title">From draft to live</div>
-    <div class="sub">What turns this from a plan into the operating system for June – August.</div>
-    <div class="check">
-      <div class="crow"><span class="cdot"></span>Set the targets from week-1 baselines — the dollar values and the day counts.</div>
-      <div class="crow"><span class="cdot"></span>Every owner knows their one number and where it ladders.</div>
-      <div class="crow"><span class="cdot"></span>The design-stage framework rolls out to the whole team.</div>
-      <div class="crow"><span class="cdot"></span>Roadmap runs June → August, reviewed monthly.</div>
-    </div>
-    <div class="rule">secure&nbsp; →&nbsp; deliver&nbsp; →&nbsp; showcase</div>
   </section>
 
 </div>
