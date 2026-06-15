@@ -73,7 +73,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
 .rk{font-size:clamp(13px,1.4vw,16px);color:var(--text-2);margin-top:2px}
 .muted{color:var(--text-3);font-weight:400}
 .tag-ns{background:rgba(26,25,22,.06);color:var(--text-2);font-size:clamp(12px,1.2vw,14px);padding:3px 13px;border-radius:999px}
-.dots{display:flex;gap:8px;align-items:center}
+.dots{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center}
 .dot{width:9px;height:9px;border-radius:999px;border:0;padding:0;background:var(--border-2);cursor:pointer;transition:background .15s,width .2s}
 .dot.on{background:var(--g);width:26px}
 .nav{display:flex;gap:10px}
@@ -84,7 +84,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
 <div class="bar top">
   <div class="brand"><span class="dotmark"></span><b>Corner</b> · company roadmap</div>
   <div class="tools">
-    <span class="count"><span class="cur">1</span><span class="tot"> / 8</span></span>
+    <span class="count"><span class="cur">1</span><span class="tot"> / 10</span></span>
     <button class="btn present">Present</button>
   </div>
 </div>
@@ -101,7 +101,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
   <section class="slide">
     <div class="eyebrow">the focus</div>
     <div class="title">We win at commitment, not demand</div>
-    <div class="sub">Demand and craft are real strengths we keep building. What loses us projects is the stretch between “yes” and “paid” — and that's where this roadmap aims.</div>
+    <div class="sub">We've been focused on building a pipeline of $500 projects, and we'll keep at it. But we also need to fill the gap — the stretch between “yes” and “paid” — and that's where this roadmap aims.</div>
     <div class="funnel">
       <span class="chip g">Leads</span><span class="sep">→</span>
       <span class="chip g">Proposal</span><span class="sep">→</span>
@@ -111,10 +111,30 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
       <span class="chip o">Delivery</span><span class="sep">→</span>
       <span class="chip o">Photoshoot</span>
     </div>
-    <div class="sub" style="margin-bottom:clamp(16px,2vw,24px)">Most of the leak sits between <span style="color:var(--text);font-weight:500">$500 and 10%</span> — the design stage.</div>
+    <div class="sub" style="margin-bottom:clamp(16px,2vw,24px)">Most of that gap sits between <span style="color:var(--text);font-weight:500">$500 and 10%</span> — the design stage.</div>
     <div class="legend">
       <span class="leg"><span class="ld" style="background:var(--g)"></span> Growth — to the 10%</span>
       <span class="leg"><span class="ld" style="background:var(--o)"></span> Operations — after the 10%</span>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="eyebrow"><span class="tag tag-g">growth</span> the focus</div>
+    <div class="title">Build the pipeline, and close it</div>
+    <div class="sub">The growth team owns everything up to the 10% — two jobs, one team.</div>
+    <div class="grid2">
+      <div class="card"><h4>Keep filling it</h4><p>a sustainable, predictable pipeline of high-quality $500 customers</p></div>
+      <div class="card"><h4>Close the gap</h4><p>convert $500 customers to 10% with the new design-stage framework</p></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="eyebrow"><span class="tag tag-o">operations</span> the focus</div>
+    <div class="title">An experience without surprises</div>
+    <div class="sub">The operations team owns everything after the 10%.</div>
+    <div class="grid2">
+      <div class="card"><h4>No surprises</h4><p>a journey with no unexpected scenarios for the customer, at any stage</p></div>
+      <div class="card"><h4>NPS by design</h4><p>the whole process is set up so high NPS is the natural result</p></div>
     </div>
   </section>
 
@@ -134,9 +154,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
     <div class="eyebrow"><span class="tag tag-g">OKR 1</span> growth · revenue</div>
     <div class="title">Increase revenue</div>
     <div class="sub">Land the new design-stage framework and fill the pipeline.</div>
-    <div class="kr"><h4><span class="ac-g">KR 1.1</span> · Convert the $500 pipeline to 10%</h4><p>all current and June–July $500 deposits reach 10% by end of August</p></div>
+    <div class="kr"><h4><span class="ac-g">KR 1.1</span> · Convert the $500 pipeline to 10%</h4><p>all current and June–July $500 customers reach 10% by end of August</p></div>
     <div class="kr"><h4><span class="ac-g">KR 1.2</span> · Design-stage framework live</h4><p>carrying ≥ 85% of design-stage projects on-cadence</p></div>
-    <div class="kr"><h4><span class="ac-g">KR 1.3</span> · New projects into the pipeline</h4><p>target set from the week-1 baseline</p></div>
+    <div class="kr"><h4><span class="ac-g">KR 1.3</span> · A sustainable, predictable pipeline</h4><p>high-quality new $500 customers, month over month</p></div>
     <div class="note">North star: revenue — the lagging result these KRs feed.</div>
   </section>
 
@@ -145,20 +165,20 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
     <div class="title">Set up a delivery engine</div>
     <div class="sub">Hire and standardize so we reliably ship what we secure.</div>
     <div class="kr"><h4><span class="ac-o">KR 2.1</span> · Projects moved to production on time</h4><p>delivered to the production stage on schedule</p></div>
-    <div class="kr"><h4><span class="ac-o">KR 2.2</span> · Customer experience standardized</h4><p>one consistent journey — mood boards, SOPs, communication</p></div>
+    <div class="kr"><h4><span class="ac-o">KR 2.2</span> · Customer experience standardized</h4><p>one consistent journey — from sending samples to approving the installed kitchen</p></div>
     <div class="kr"><h4><span class="ac-o">KR 2.3</span> · Photoshoots completed</h4><p>professional shoots of delivered kitchens</p></div>
   </section>
 
   <section class="slide">
     <div class="eyebrow">the handoff</div>
-    <div class="title">The 10% handoff is owned</div>
-    <div class="sub">Our funnel leaks at handoffs. The line where Growth passes to Operations won't be one of them.</div>
+    <div class="title">Aligned at the 10% handoff</div>
+    <div class="sub">Where Growth passes a project to Operations — an important point for accuracy and alignment across all sides, internal and customer.</div>
     <div class="flow">
       <div class="zone g"><div class="zt">Growth</div><div class="zs">leadgen → 10%</div></div>
       <div class="mid"><div class="ar">→</div><div class="pct">10%</div></div>
       <div class="zone o"><div class="zt">Operations</div><div class="zs">10% → photoshoot</div></div>
     </div>
-    <div class="kr"><h4>The one rule</h4><p>Operations books every 10%-paid project into technical drawings within [X] days.</p></div>
+    <div class="kr"><h4>The one rule</h4><p>Every 10%-paid project moves into technical drawings within [X] days — with specs and expectations aligned on both sides.</p></div>
   </section>
 
   <section class="slide">
@@ -173,7 +193,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
     <div class="role"><div><div class="rn">Design lead</div><div class="rk">% of projects completing the design stage on-cadence</div></div><span class="tag tag-g">OKR 1</span></div>
     <div class="role"><div><div class="rn">Operations lead</div><div class="rk">Photoshoots completed</div></div><span class="tag tag-o">OKR 2</span></div>
     <div class="role"><div><div class="rn">Technical designer</div><div class="rk">Median technical-drawing turnaround</div></div><span class="tag tag-o">OKR 2</span></div>
-    <div class="role"><div><div class="rn">Project manager</div><div class="rk">Delightful customer experience provided</div></div><span class="tag tag-o">OKR 2</span></div>
+    <div class="role"><div><div class="rn">Project manager</div><div class="rk">% of projects with smooth customer experience and operational excellence at every stage</div></div><span class="tag tag-o">OKR 2</span></div>
   </section>
 
   <section class="slide">
@@ -182,7 +202,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font
     <div class="sub">We track progress through clear metrics and regular updates.</div>
     <div class="grid2">
       <div class="card"><h4>Monthly KPI review</h4><p>every owner's number, reviewed together</p></div>
-      <div class="card"><h4>Bi-weekly whole-team</h4><p>alignment as the team grows</p></div>
+      <div class="card"><h4>Bi-weekly whole-team</h4><p>we need this meeting to get aligned across the whole team on our progress</p></div>
     </div>
   </section>
 
